@@ -1,0 +1,129 @@
+.section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  color: var(--coral);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--green-deep);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--brown-light);
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.masonry {
+  columns: 4;
+  column-gap: 12px;
+}
+
+.item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.item.wide {
+  grid-column: span 2;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(45,80,22,0.7) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.overlay span {
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-deep);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 6px 24px rgba(45, 80, 22, 0.3);
+}
+
+.ctaBtn:hover {
+  background: var(--green-mid);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(45, 80, 22, 0.4);
+}
+
+@media (max-width: 900px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+    columns: 2;
+  }
+  .item.wide {
+    grid-column: span 1;
+  }
+}

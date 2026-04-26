@@ -1,0 +1,114 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-deep: #2D5016;
+  --green-mid: #4A7C2F;
+  --green-light: #6B9B4A;
+  --green-pale: #A8C99B;
+  --green-tint: #D6E8CC;
+  --cream: #FFF8EE;
+  --cream-dark: #F0E6D3;
+  --coral: #E8734A;
+  --coral-light: #F0956A;
+  --gold: #D4A843;
+  --gold-light: #F0C878;
+  --brown-dark: #2C1810;
+  --brown-mid: #5C3D2E;
+  --brown-light: #8B6355;
+  --white: #FFFFFF;
+  --off-white: #FAFAF7;
+  --shadow-sm: 0 2px 8px rgba(45, 80, 22, 0.08);
+  --shadow-md: 0 4px 20px rgba(45, 80, 22, 0.12);
+  --shadow-lg: 0 8px 40px rgba(45, 80, 22, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--brown-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--green-tint);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-mid);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}

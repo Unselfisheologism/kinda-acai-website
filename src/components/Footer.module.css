@@ -1,0 +1,125 @@
+.footer {
+  background: var(--brown-dark);
+  color: var(--cream);
+  padding: 80px 0 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 248, 238, 0.1);
+}
+
+.brand {}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.logoK {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.logoText {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+}
+
+.tagline {
+  font-size: 14px;
+  color: rgba(255, 248, 238, 0.5);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social {}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-light);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--cream);
+}
+
+.linksTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksList a {
+  font-size: 14px;
+  color: rgba(255, 248, 238, 0.6);
+  transition: color 0.2s;
+}
+
+.linksList a:hover {
+  color: var(--gold-light);
+}
+
+.address {}
+
+.addressText {
+  font-size: 14px;
+  color: rgba(255, 248, 238, 0.6);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.hours {
+  font-size: 14px;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: rgba(255, 248, 238, 0.35);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
